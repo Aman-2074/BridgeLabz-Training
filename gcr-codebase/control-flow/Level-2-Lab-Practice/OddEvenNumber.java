@@ -1,0 +1,31 @@
+// Creating a classOddEvenNumber from which we can find which natural number is odd or even
+
+import java.util.Scanner;
+
+public class OddEvenNumbers {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        // Take user input
+        System.out.print("Enter a natural number: ");
+        int number = input.nextInt();
+
+        // Check for natural number
+        if (number <= 0) {
+            System.out.println("Please enter a valid natural number.");
+        } else {
+            // Using for loop from 1 to number
+            for (int i = 1; i <= number; i++) {
+                if (i % 2 == 0) {
+                    System.out.println(i + " is an Even number");
+                } else {
+                    System.out.println(i + " is an Odd number");
+                }
+            }
+        }
+
+        input.close();
+    }
+}
+
